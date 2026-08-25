@@ -69,16 +69,6 @@ Then in the browser tab that opens:
 3. Ask a question.
 4. Expand "Show retrieved chunks" to see exactly what the model based its answer on.
 
-## Deploying it (so you can link it on your resume)
-
-The easiest free option is **Streamlit Community Cloud**:
-1. Push this folder to a GitHub repo.
-2. Go to share.streamlit.io, connect the repo, point it at `app.py`.
-3. It'll build and give you a public URL.
-
-(Don't hardcode your API key in the repo — the app already asks for it via a
-password-style input field, which keeps it out of your code.)
-
 ## Next steps to level this up
 
 - **Swap TF-IDF for real embeddings**: use `sentence-transformers` (local,
@@ -89,15 +79,3 @@ password-style input field, which keeps it out of your code.)
 - **Citations**: have the model cite which chunk it used for each claim.
 - **Conversation memory**: let follow-up questions reference earlier turns.
 
-## Resume bullet
-
-> Built a Retrieval-Augmented Generation (RAG) document Q&A system from
-> scratch (no LangChain), implementing custom chunking, TF-IDF based
-> retrieval, and LLM-grounded generation via the Gemini API; deployed as a
-> public Streamlit app.
-
-If you upgrade to real embeddings + a vector DB, update it to:
-
-> Built and deployed a RAG pipeline using sentence embeddings, ChromaDB for
-> vector storage, and the Gemini API for generation, reducing hallucination
-> by grounding answers in retrieved document context.
